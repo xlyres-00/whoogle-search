@@ -73,25 +73,13 @@ def send_tor_signal(signal: Signal) -> bool:
 
 
 def gen_user_agent(config, is_mobile) -> str:
-<<<<<<< HEAD
-    # Define the Lynx user agent
-    LYNX_UA = 'Lynx/2.9.2 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/3.4.0'
-=======
     # Define the default PlayStation Portable user agent (replaces Lynx)
     DEFAULT_UA = 'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)'
->>>>>>> 2c5adbc (Initial upload: Whoogle app (excluding connection-api))
 
     # If using custom user agent, return the custom string
     if config.user_agent == 'custom' and config.custom_user_agent:
         return config.custom_user_agent
 
-<<<<<<< HEAD
-    # If using Lynx user agent
-    if config.user_agent == 'LYNX_UA':
-        return LYNX_UA
-
-    # If no custom user agent is set, generate a random one
-=======
     # If using environment configuration
     if config.user_agent == 'env_conf':
         if is_mobile:
@@ -110,7 +98,6 @@ def gen_user_agent(config, is_mobile) -> str:
         return DEFAULT_UA
 
     # If no custom user agent is set, generate a random one (for backwards compatibility)
->>>>>>> 2c5adbc (Initial upload: Whoogle app (excluding connection-api))
     firefox = random.choice(['Choir', 'Squier', 'Higher', 'Wire']) + 'fox'
     linux = random.choice(['Win', 'Sin', 'Gin', 'Fin', 'Kin']) + 'ux'
 

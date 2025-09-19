@@ -34,8 +34,6 @@ const setupConfigLayout = () => {
 
         content.classList.toggle("open");
     });
-<<<<<<< HEAD
-=======
 
     // Setup user agent dropdown handler
     const userAgentSelect = document.getElementById("config-user-agent");
@@ -50,7 +48,6 @@ const setupConfigLayout = () => {
             }
         });
     }
->>>>>>> 2c5adbc (Initial upload: Whoogle app (excluding connection-api))
 };
 
 const loadConfig = event => {

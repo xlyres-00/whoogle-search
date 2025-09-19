@@ -165,22 +165,18 @@ for cb_dir in cache_busting_dirs:
         try:
             os.symlink(full_cb_path, build_path)
         except FileExistsError:
-<<<<<<< HEAD
-            # Symlink hasn't changed, ignore
-            pass
-=======
             # Symlink or file already exists, ignore
             pass
         except OSError:
-            # On Windows without symlink privileges, fall back to copying the file
+            # On platforms without symlink privileges, fall back to copying the file
             # to the build path so cache-busting still works.
             try:
                 import shutil
                 # Ensure directory exists and copy (overwrite if exists)
                 shutil.copy2(full_cb_path, build_path)
             except Exception:
+                # If copy fails for any reason, ignore and continue
                 pass
->>>>>>> 2c5adbc (Initial upload: Whoogle app (excluding connection-api))
 
         # Create mapping for relative path urls
         map_path = build_path.replace(app.config['APP_ROOT'], '')

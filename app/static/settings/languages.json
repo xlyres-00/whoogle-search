@@ -46,11 +46,7 @@
   {"name": "Swahili (Kiswahili)", "value": "lang_sw"},
   {"name": "Swedish (Svenska)", "value": "lang_sv"},
   {"name": "Thai (ไทย)", "value": "lang_th"},
-<<<<<<< HEAD
-  {"name": "Turkish (Türk)", "value": "lang_tr"},
-=======
   {"name": "Turkish (Türkçe)", "value": "lang_tr"},
->>>>>>> 2c5adbc (Initial upload: Whoogle app (excluding connection-api))
   {"name": "Ukrainian (Українська)", "value": "lang_uk"},
   {"name": "Vietnamese (Tiếng Việt)", "value": "lang_vi"},
   {"name": "Welsh (Cymraeg)", "value": "lang_cy"},
