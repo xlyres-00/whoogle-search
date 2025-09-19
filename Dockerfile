@@ -84,6 +84,10 @@ COPY misc/tor/start-tor.sh misc/tor/start-tor.sh
 COPY app/ app/
 COPY run whoogle.env* ./
 
+# Normalize Windows line endings (if any) and ensure scripts are executable
+RUN sed -i 's/\r$//' run misc/tor/start-tor.sh && \
+    chmod +x run misc/tor/start-tor.sh
+
 # Create user/group to run as
 RUN adduser -D -g $DOCKER_USERID -u $DOCKER_USERID $DOCKER_USER
 
